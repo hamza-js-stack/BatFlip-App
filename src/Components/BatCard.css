@@ -1,0 +1,58 @@
+.bat-card {
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.bat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bat-image-wrapper {
+  overflow: hidden;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.bat-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.bat-card:hover .bat-image {
+  transform: scale(1.1);
+}
+
+.add-to-cart-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #555;
+  transform: scale(1.03);
+}
+.bat-card h3 {
+  color: black; /* Make the bat name black */
+  font-weight: bold;
+}
+
+.bat-card p {
+  color: #333; /* Slightly darker grey for price */
+}
+

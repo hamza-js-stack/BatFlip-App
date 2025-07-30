@@ -1,0 +1,42 @@
+.bat-section {
+  padding: 3rem;
+  min-height: 100vh;
+  background: url('https://img.freepik.com/premium-photo/icc-world-cup-cricket-stadium-background-with-flag-trophy-vector-wallpaper-design-illustration_837518-24272.jpg')
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bat-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.bat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .bat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bat-grid {
+    grid-template-columns: 1fr;
+  }
+}

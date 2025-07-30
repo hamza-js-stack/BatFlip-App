@@ -1,0 +1,228 @@
+/* 🌟 MAIN HOME STYLING */
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
+
+/* ✅ Grid for 3 bats per row */
+.bat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  padding: 10px 20px;
+  justify-items: center;
+}
+
+.bat-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 12px;
+  width: 180px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.bat-card img {
+  width: 100px;
+  height: 140px;
+  object-fit: contain;
+  background: transparent;
+  transition: transform 0.3s ease;
+}
+
+.bat-card img:hover {
+  transform: scale(1.2);
+}
+
+.bat-card h3 {
+  margin: 10px 0 5px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.bat-card p {
+  color: green;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.add-to-cart-btn {
+  margin-top: 8px;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Cart Styling */
+.cart-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 16px;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.cart-popup {
+  margin-top: 10px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  text-align: left;
+}
+
+.cart-icon:hover .cart-popup {
+  display: block;
+}
+
+/* Helmet Animation */
+.helmet-container {
+  width: 100%;
+  overflow: hidden;
+  height: 180px;
+  position: relative;
+  margin-top: 40px;
+}
+
+.helmet-animation {
+  width: 160px;
+  height: auto;
+  position: absolute;
+  animation: bounceHelmet 7s ease-in-out infinite alternate;
+}
+
+@keyframes bounceHelmet {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: calc(100% - 160px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bat-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bat-card {
+    width: 160px;
+  }
+
+  .bat-card img {
+    width: 90px;
+    height: 120px;
+  }
+
+  .add-to-cart-btn {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+}
+
+/* 🌙 THEME STYLING */
+
+body.black-theme {
+  background-color: #111;
+  color: white;
+}
+
+body.yellow-theme {
+  background-color: #fff200;
+  color: black;
+}
+
+.black-theme .theme-toggle-btn {
+  background-color: black;
+  color: yellow;
+}
+
+.yellow-theme .theme-toggle-btn {
+  background-color: yellow;
+  color: black;
+}
+
+/* 🎨 THEME TOGGLE BUTTON */
+.theme-toggle-btn {
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  margin-bottom: 30px;
+}
+
+/* 🏏 POPULAR CRICKET BATS SECTION */
+.bat-section {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.yellow-theme .bat-section {
+  background-color: yellow;
+  color: black;
+}
+
+.black-theme .bat-section {
+  background-color: black;
+  color: white;
+}
+
+.bat-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hover Zoom (Optional) */
+.bat-hover-zoom {
+  transition: transform 0.4s ease-in-out;
+}
+
+.bat-hover-zoom:hover {
+  transform: scale(2.5);
+  z-index: 10;
+  position: relative;
+}
